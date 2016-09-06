@@ -1,11 +1,3 @@
-Brugeroprettelse
-----------------
-Det kan anbefales at bruge en KhanAcademy Teacher-konto. Oprette en klasse, og
-oprette børnene fra teacherkontoen.
-
-Alternativt skal man nemlig have fat i deres forældres email og
-forældrene skal oprette kontoen f.eks. via telefon (møj besværligt!)
-
 Læringsmål
 ----------
  * Syntax for funktionskald
@@ -28,8 +20,3 @@ Kommentarer
 
  * De tre opgaver er kun idéer, lad dem hellere lave deres egen figur
    hvis de har lyst til det.
-
-Hvorfor handout på papir?
--------------------------
-Man lærer ikke syntax ved at copy paste fra en hjemmeside. Derfor skal
-de skrive det af fra papirarket.
