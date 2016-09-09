@@ -12,7 +12,15 @@
 \captionnamefont{\bfseries}
 
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{positioning,arrows,calc}
+
+\newcommand{\vs}{%
+    \tikz[remember picture,overlay]{\node at
+        ($(current page.south east)+(-2,2)$)
+        [anchor=south east] {Vend siden $\rightarrow$};}
+}
+
+
 
 \usepackage{listings}
 \lstdefinelanguage{JavaScript}{
@@ -59,7 +67,7 @@ literate=%
 
 \begin{document}
 \maketitle
-
+\vs
 \chapter{Variable}
 Tast det her ind:
 \begin{lstlisting}
@@ -91,44 +99,72 @@ Fisk der kan bevæge sig:
 \begin{itemize}
 \item Farvelæg fisken
 \item Giv fisken et øje
-\item Lav en ``Y''-variabel til fisken
+\item Lav en ny variabel til fisken, der styrer y-positionen
 \item Få bilen fra sidste uge til at køre
 \end{itemize}
-
+\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/fisk-ypos.png}
+\hspace{1cm}\includegraphics[width=0.5\textwidth]{pics/bil-frem.png}
 
 \newpage
 \chapter{Animation}
-\begin{lstlisting}
-draw = function () {
-  fill(0, 0, 0);
-  ellipse(mouseX, mouseY, 10, 10);
-};
-\end{lstlisting}
-
-\begin{lstlisting}
-draw = function () {
-  line(0, 0, mouseX, mouseY);
-};
-\end{lstlisting}
 
 \noindent
-Baggrundsfarve
+Tegneprogram
 \begin{lstlisting}
-draw = function () {
-  background(255, 255, 0);
-  line(0, 0, mouseX, mouseY);
-};
+    fill(0, 0, 0);
+    draw = function () {
+      ellipse(mouseX, mouseY, 10, 10);
+    };
 \end{lstlisting}
 
+~
+
 \noindent
-UFO
+Eller prøv:
 \begin{lstlisting}
-draw = function () {
-  background(127, 197, 255);
-  fill(0, 0, 0);
-  ellipse(mouseX, mouseY-25, 50, 25);
-  arc(mouseX, mouseY, 100, 50, 180, 360);
-};
+    draw = function () {
+      line(0, 0, mouseX, mouseY);
+    };
 \end{lstlisting}
+
+\chapter{Baggrundsfarve}
+
+Prøv \texttt{background()} kommandoen:
+\begin{lstlisting}
+    draw = function () {
+      background(255, 255, 0);
+      line(0, 0, mouseX, mouseY);
+    };
+\end{lstlisting}
+
+~
+
+\noindent
+UFO:
+\begin{lstlisting}
+    draw = function () {
+      background(128, 200, 255);
+      fill(0, 0, 0);
+      ellipse(mouseX, mouseY-25, 50, 25);
+      arc(mouseX, mouseY, 100, 50, 180, 360);
+    };
+\end{lstlisting}
+
+\chapter{Opgave}
+
+\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds.png}
+\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds-tegning.png}
+
+~
+
+\noindent
+Brug:
+\begin{lstlisting}
+    background(9,35,54);
+    stroke(233,249,247, 30);
+\end{lstlisting}
+hvis du vil have de samme farver.
+
+
 
 \end{document}
