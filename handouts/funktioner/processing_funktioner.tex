@@ -22,8 +22,6 @@
         [anchor=south east] {Vend siden $\rightarrow$};}
 }
 
-
-
 \usepackage{listings}
 \lstdefinelanguage{JavaScript}{
   keywords={break, case, catch, continue, debugger, default, delete,
@@ -64,92 +62,54 @@ literate=%
 % Remove page numbers
 \renewcommand\thepage{}
 
-\title{Variable i Processing
+\title{Funktioner i Processing
   \\ {\normalfont\small\scshape Coding Pirates DIKU }} \date{\today}
 
 \begin{document}
 \maketitle
 \vs
-\chapter{Variable}
-Tast det her ind:
+\chapter{Funktioner}
+En fiske-funktion:
 \begin{lstlisting}
-    var xpos = 200;
-    rect(xpos, 50, 75, 75);
-\end{lstlisting}
-Prøv at ændre 200 til et andet tal.
-
-\vspace{5mm}
-
-\noindent
-Eller prøv:
-\begin{lstlisting}
-    var diameter = 25;
-    ellipse(200, 200, diameter, diameter);
-\end{lstlisting}
-
-\vspace{5mm}
-
-\noindent
-Fisk der kan bevæge sig:
-\begin{lstlisting}
-    var xpos = 200;
+var fish = function (xpos) {
     ellipse(xpos, 200, 120, 75);
     triangle(xpos-60, 200, xpos-90, 170, xpos-90, 230);
+};
+    
+fish(100);
+fish(300);
 \end{lstlisting}
 
 \chapter{Opgaver}
 \begin{itemize}
-\item Farvelæg fisken
-\item Giv fisken et øje
-\item Lav en ny variabel til fisken, der styrer y-positionen
-\item Få bilen fra sidste uge til at køre
+\item Skriv en \texttt{ufo(x,y)}-funktion.
 \end{itemize}
-\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/fisk-ypos.png}
-\hspace{1cm}\includegraphics[width=0.5\textwidth]{pics/bil-frem.png}
 
 \newpage
-\chapter{Tegneprogram}
+\chapter{UFO styring}
 
-\noindent
-Tegneprogram
 \begin{lstlisting}
-    fill(0, 0, 0);
-    draw = function () {
-      ellipse(mouseX, mouseY, 10, 10);
-    };
-\end{lstlisting}
+var retning = 0;
+keyPressed = function () {
+  if (keyCode === LEFT) {
+    retning = -5;
+  }
+  if (keyCode === RIGHT) {
+    retning = 5;
+  }
+}
 
-\noindent
-Slet alt med klik på musen:
-\begin{lstlisting}
-    mousePressed = function () {
-      background(255, 255, 255);
-    };
+var ufoX = 200;
+
+draw = function () {
+   backgroun(255,255,255);
+   ufo(ufoX, mouseY);
+   ufoX = ufoX + retning;
+}
 \end{lstlisting}
 
 \chapter{Opgaver}
 
-\begin{itemize}
-\item Prøv at ændre tegneprogrammet til at bruge \texttt{line()}
-\item Prøv at ændre farve vha. \texttt{mouseX/mouseY}
-\item UFO der kan styres med musen
-
-\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/ufo.png}
-
-\item 
-Tegn streger fra hjørner til musen:
-
-\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds.png}
-\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds-tegning.png}
-
-Brug f.eks. farver:
-\begin{lstlisting}
-    background(9,35,54);
-    stroke(233,249,247, 30);
-\end{lstlisting}
-Det fjerde argument til \texttt{stroke} er gennemsigtighed (0-100\%)!
-
-\end{itemize}
 
 
 \end{document}
