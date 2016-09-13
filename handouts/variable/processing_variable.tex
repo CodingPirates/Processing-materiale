@@ -1,6 +1,8 @@
 \documentclass[oneside,a4paper,10pts,article]{memoir}
 \usepackage[utf8]{inputenc}
 
+\usepackage[danish]{isodate}
+
 \usepackage{palatino}
 \usepackage{graphicx}
 \usepackage{todonotes}
@@ -81,8 +83,8 @@ Prøv at ændre 200 til et andet tal.
 \noindent
 Eller prøv:
 \begin{lstlisting}
-    var size = 25;
-    ellipse(200, 200, size, size);
+    var diameter = 25;
+    ellipse(200, 200, diameter, diameter);
 \end{lstlisting}
 
 \vspace{5mm}
@@ -106,7 +108,7 @@ Fisk der kan bevæge sig:
 \hspace{1cm}\includegraphics[width=0.5\textwidth]{pics/bil-frem.png}
 
 \newpage
-\chapter{Animation}
+\chapter{Tegneprogram}
 
 \noindent
 Tegneprogram
@@ -117,54 +119,37 @@ Tegneprogram
     };
 \end{lstlisting}
 
-~
-
 \noindent
-Eller prøv:
+Slet alt med klik på musen:
 \begin{lstlisting}
-    draw = function () {
-      line(0, 0, mouseX, mouseY);
-    };
-\end{lstlisting}
-
-\chapter{Baggrundsfarve}
-
-Prøv \texttt{background()} kommandoen:
-\begin{lstlisting}
-    draw = function () {
-      background(255, 255, 0);
-      line(0, 0, mouseX, mouseY);
-    };
-\end{lstlisting}
-
-~
-
-\noindent
-UFO:
-\begin{lstlisting}
-    draw = function () {
-      background(128, 200, 255);
-      fill(0, 0, 0);
-      ellipse(mouseX, mouseY-25, 50, 25);
-      arc(mouseX, mouseY, 100, 50, 180, 360);
+    mousePressed = function () {
+      background(255, 255, 255);
     };
 \end{lstlisting}
 
 \chapter{Opgave}
 
+\begin{itemize}
+\item Prøv at ændre tegneprogrammet til at bruge \texttt{line()}
+\item Prøv at ændre farve vha. \texttt{mouseX/mouseY}
+\item UFO der kan styres med musen
+
+\hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/ufo.png}
+
+\item 
+Tegn streger fra hjørner til musen:
+
 \hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds.png}
 \hspace{1cm}\includegraphics[width=0.4\textwidth]{pics/kryds-tegning.png}
 
-~
-
-\noindent
-Brug:
+Brug f.eks. farver:
 \begin{lstlisting}
     background(9,35,54);
     stroke(233,249,247, 30);
 \end{lstlisting}
-hvis du vil have de samme farver.
+Det fjerde argument til \texttt{stroke} er gennemsigtighed (0-100\%)!
 
+\end{itemize}
 
 
 \end{document}
