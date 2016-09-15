@@ -17,6 +17,8 @@ Undervisningsmateriale til brug med Processing(.js)
  * [Peter Collingridge](https://www.khanacademy.org/profile/peterwcollingridge/projects) - mange forskellige
    projekter, bl.a. en del om
    naturvidenskab. [Interview](http://life.khanacademy.org/post/49146171347/a-khanversation-withpeter-collingridge-ka).
+ * Meget inspiration at hente her: <https://www.khanacademy.org/profile/LiveMas/projects>
+ * Denne bruger har en fin tegnestil, kan evt. bruges til at finde figurer/dyr/personer til sine spil. <https://www.khanacademy.org/profile/LemonMacaron/projects>
 
 ### Div. links
  * [natureofcode.com](http://natureofcode.com) - bog af Daniel Shiffman
