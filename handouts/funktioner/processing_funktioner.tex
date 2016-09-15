@@ -68,48 +68,86 @@ literate=%
 \begin{document}
 \maketitle
 \vs
+\vspace{-10mm}
 \chapter{Funktioner}
 En fiske-funktion:
 \begin{lstlisting}
-var fish = function (xpos) {
-    ellipse(xpos, 200, 120, 75);
-    triangle(xpos-60, 200, xpos-90, 170, xpos-90, 230);
+var fish = function (xpos, ypos) {
+    ellipse(xpos, ypos, 120, 75);
+    triangle(xpos-60, ypos, xpos-90, ypos-30, xpos-90, ypos+30);
 };
     
 fish(100);
 fish(300);
 \end{lstlisting}
-
+\vspace{-3mm}
+\chapter{Tilfældige fisk}
+\begin{lstlisting}
+draw = function () {
+    var x = random(0, width);
+    var y = random(0, height);
+    fish(x, y);
+};
+\end{lstlisting}
+\vspace{-3mm}
 \chapter{Opgaver}
 \begin{itemize}
+\item Vælg tilfældige farver på fiskene
+\item Skriv en Pokéball funktion.
+\item Tegn Pokéball's i tilfældige størrelser
 \item Skriv en \texttt{ufo(x,y)}-funktion.
 \end{itemize}
 
-\newpage
-\chapter{UFO styring}
+\hspace{-20mm}
+\includegraphics[width=0.4\textwidth]{pics/flerefisk.png}
+\includegraphics[width=0.2\textwidth]{pics/pokeball.png}
+\includegraphics[width=0.4\textwidth]{pics/pokeballs.png}
+\includegraphics[width=0.2\textwidth]{pics/ufo.png}
 
+\newpage
+\chapter{UFO-spil}
 \begin{lstlisting}
-var retning = 0;
+var ufoX = 200;
+var hastighedX = 0;
+
 keyPressed = function () {
   if (keyCode === LEFT) {
-    retning = -5;
+    hastighedX = -5;
   }
   if (keyCode === RIGHT) {
-    retning = 5;
+    hastighedX = 5;
   }
 }
 
-var ufoX = 200;
-
 draw = function () {
-   backgroun(255,255,255);
+   background(255,255,255);
    ufo(ufoX, mouseY);
-   ufoX = ufoX + retning;
+   ufoX = ufoX + hastighedX;
 }
 \end{lstlisting}
 
 \chapter{Opgaver}
+\begin{itemize}
+\item Lav en ufoY variabel.
+\item Lav en hastighedY variabel.
+\item Gør så piletasterne op/ned ændrer hastighedY variablen ($\pm5$).
+\item Gør så ufoY variablen ændres i forhold til hastigheden.
+\end{itemize}
 
+\chapter{UFO laserkanon}
+\begin{lstlisting}
+  if(mouseIsPressed===true){
+    line(ufoX, ufoY, mouseX, mouseY);
+  }
+\end{lstlisting}
 
+\chapter{Opgaver}
+\begin{itemize}
+\item Gør laser-kanonen kraftigere med \texttt{strokeWeight(<bredde>)}
+\item Få laseren til at blinke i forskellige farver!
+\end{itemize}
+
+\hspace{1cm}
+\includegraphics[width=0.4\textwidth]{pics/laserkanon.png}
 
 \end{document}
