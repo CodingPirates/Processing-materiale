@@ -1,7 +1,7 @@
 <link id="linkstyle" rel="stylesheet" href="../foghorn.css">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-# Processeing spil.
+# Processing spil.
 
 Via dette link kan du se eksempler på spil der er lavet i procesessing.
 Hvis du har et fedt spil der skal ind så send en pull request.
