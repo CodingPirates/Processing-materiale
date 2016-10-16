@@ -6,6 +6,9 @@ Undervisningsmateriale til brug med Processing(.js)
 
 ## Link collection
 
+### Spil
+Du kan prøve de spil der ligger i mappen _spil_ via dette [link](http://codingpirates.github.io/Processing-materiale/)
+
 ### Coding Pirates KhanAcademy brugere (tilføj dig selv!)
  * [Andreas Rudolph](https://www.khanacademy.org/profile/KaptajnKnas/projects)
  * [Martin Dybdal](https://www.khanacademy.org/profile/dybber/projects)
