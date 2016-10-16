@@ -1,3 +1,6 @@
+Prøv online: 
+ <https://codingpirates.github.io/Processing-materiale/spil/asteroids/index.html>
+
 Processing.js version af
  <https://github.com/JohnEarnest/StoneSoup/tree/master/Austereoids>
 
