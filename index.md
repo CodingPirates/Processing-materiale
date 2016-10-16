@@ -12,3 +12,4 @@ Hvis du har et fedt spil der skal ind så send en pull request.
 * [cannons](spil/cannons/index.html) ![](spil/cannons/game.png)
 * [Agar avoid](spil/agaravoid/index.html) ![](spil/agaravoid/game.png)
 * [UFO](spil/ufo/index.html) ![](spil/ufo/game.png)
+* [Paint](spil/ufo/paint.html) ![](spil/paint/game.png)
