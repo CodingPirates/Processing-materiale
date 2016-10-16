@@ -14,7 +14,7 @@ mousePressed = function () {
     background(255, 255, 255);
 };
 
-keyPressed = function() {
+keyReleased = function() {
   if (keyCode === UP   ) { fill(255, 0, 0);   }
   if (keyCode === DOWN ) { fill(0, 255, 0); }
   if (keyCode === LEFT ) { fill(0, 0, 255); }

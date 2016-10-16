@@ -1,5 +1,5 @@
 Prøv online: 
- <https://codingpirates.github.io/Processing-materiale/spil/maze/index.html>
+ <https://codingpirates.github.io/Processing-materiale/spil/maze/>
 
 Processing.js version af
  <https://github.com/JohnEarnest/StoneSoup/tree/master/Dungine>
