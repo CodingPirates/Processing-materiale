@@ -1,0 +1,115 @@
+\documentclass[oneside,a4paper,10pts,article]{memoir}
+\usepackage[utf8]{inputenc}
+
+\usepackage[danish]{isodate}
+
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage{todonotes}
+\presetkeys{todonotes}{inline}{}
+
+\usepackage{url}
+\usepackage[hidelinks,hyperindex]{hyperref}
+
+\captionnamefont{\bfseries}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,calc}
+
+\newcommand{\vs}{%
+    \tikz[remember picture,overlay]{\node at
+        ($(current page.south east)+(-2,2)$)
+        [anchor=south east] {Vend siden $\rightarrow$};}
+}
+
+\usepackage{listings}
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete,
+    do, else, false, finally, for, function, if, in, instanceof, new,
+    null, return, switch, this, throw, true, try, typeof, var, void,
+    while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywordstyle=\color{blue},
+  ndkeywordstyle=\color{darkgray},
+  identifierstyle=\color{black},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  sensitive=true,
+  extendedchars=true,
+literate=%
+{æ}{{\ae}}1
+{å}{{\aa}}1
+{ø}{{\o}}1
+{Æ}{{\AE}}1
+{Å}{{\AA}}1
+{Ø}{{\O}}1
+}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\bfseries,
+  captionpos=b,
+  language=JavaScript
+}
+
+% Remove section numbers
+\setsecnumdepth{part}
+
+% Remove page numbers
+\renewcommand\thepage{}
+
+\title{Arrays
+  \\ {\normalfont\small\scshape Coding Pirates DIKU }} \date{\today}
+
+\begin{document}
+\maketitle
+\vs
+\vspace{-10mm}
+\chapter{Flere biler!}
+Brug din bil-funktion fra tidligere:
+\begin{lstlisting}
+var bilBredde = 50;
+var bil = function(xpos) {
+    ... tegnekode til bil ...
+    ... brug bilBredde ...
+};
+\end{lstlisting}
+\textbf{Lidt om arrays:}
+\\
+Et array er en samling af flere variabler inde i et variable. Dette kan være smart, når man har mange forskellige værdier som egenligt hænger sammen.
+\\
+\\
+Et array ser sådan ud: 
+\begin{lstlisting}
+var biler = [20, 40, 75];
+\end{lstlisting}
+Hvis vi indsætter arrayet med vores bilfunktion, og skaber biller ud fra det ser det sådan ud:
+\begin{lstlisting}
+var bilBredde = 50;
+var bil = function(xpos) {
+    ... tegnekode til bil ...
+    ... brug bilBredde ...
+};
+
+var biler = [20, 40, 75];
+
+bil(biler[0]);
+bil(biler[1]);
+bil(biler[2]);
+\end{lstlisting}
+Dette vil skabe 3 biler, som har x-koordinaterne: 20, 40 og 75.
+\\
+\\
+\textit{Læg mærke til at når man skal bruge variabler fra et array, skal man starte med at tælle fra nul.}
+\vspace{-3mm}
+\chapter{Opgaver}
+\begin{itemize}
+\item Prøv at tilføje flere punkter til arrayet, og skabe flere biler ud fra det. 
+\item Implementer et y-koordinat i din bil funktion, lav også et array til dette.
+\end{itemize}
+
+\end{document}

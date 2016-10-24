@@ -1,0 +1,29 @@
+SHOOTER GAME FORBEDRINGER, EFTER SVÆRHEDSGRAD:
+
+- Egne billeder
+
+- Baggrund
+
+- Score
+
+- Liv / Health 
+
+- Animationer
+
+- Flere slags fjender
+
+- Powerups / forskellige våben
+
+- Levels -> Opgraderinger
+
+- Skud refill / regeneration
+
+EKSTRA++: 
+
+- Startmenu
+
+- Timer
+
+- Shop / Penge
+
+- Multiplayer
